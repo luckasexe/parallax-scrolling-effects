@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Adventure</title>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+    <body>  
+        <header>
+            <a href="#" class="logo">Jungle</a>
+            <ul>
+                <li><a href="index.html">Moon Light</a></li>
+                <li><a href="#" class="active">Adventure</a></li>
+                <li><a href="#">Em breve</a></li>
+                <li><a href="#">Em breve</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>Its's time for a new</span><br>Adventure</h2>
+            <img src="images/page2/bird1.png" id="bird1">
+            <img src="images/page2/bird2.png" id="bird2">
+            <img src="images/page2/forest.png" id="forest">
+            <a href="#sec" id="btn">Explore</a>
+            <img src="images/page2/rocks.png" id="rocks">
+            <img src="images/page2/water.png" id="water">        
+        </section>
+        <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, accusamus tempore? Nihil, veritatis rem. Eligendi voluptatem culpa doloremque ab sapiente debitis vel nam quasi assumenda quae, qui dolor, beatae quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, labore, voluptate, ipsam explicabo non sapiente ipsum ad ea nulla rerum mollitia harum aliquam? Enim exercitationem voluptas corrupti eaque, sunt minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rerum quos est totam fuga eum vero. Fugiat quasi odio exercitationem consectetur suscipit beatae saepe aperiam quibusdam modi fuga. Ab, sit.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias totam reprehenderit quo, quaerat obcaecati nisi ea dolorem ipsam. Voluptas assumenda iste similique eveniet rerum optio nisi porro ullam quasi natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores in possimus quas. Nam dicta exercitationem aliquam suscipit mollitia temporibus, veritatis quas placeat eligendi. Iure nemo sint, quidem sed neque nisi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit unde, at sequi harum tempora quis. Aut doloribus sapiente illo. Quae ut doloribus aperiam eius corporis dolores fugit animi esse laborum.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore error quo sapiente tempore est cupiditate? Ipsum magnam distinctio asperiores hic illo odio at architecto ab accusantium, sit et eum voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos debitis iste accusamus aut animi omnis sint velit, tenetur dolor placeat tempora quibusdam voluptatem, dolorem officiis? Aperiam placeat reiciendis quasi nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam impedit iure tenetur exercitationem autem mollitia perferendis, eos esse suscipit, nihil consectetur temporibus. Dolores in labore sapiente! Harum, dolorum unde.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias totam reprehenderit quo, quaerat obcaecati nisi ea dolorem ipsam. Voluptas assumenda iste similique eveniet rerum optio nisi porro ullam quasi natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores in possimus quas. Nam dicta exercitationem aliquam suscipit mollitia temporibus, veritatis quas placeat eligendi. Iure nemo sint, quidem sed neque nisi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit unde, at sequi harum tempora quis. Aut doloribus sapiente illo. Quae ut doloribus aperiam eius corporis dolores fugit animi esse laborum.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore error quo sapiente tempore est cupiditate? Ipsum magnam distinctio asperiores hic illo odio at architecto ab accusantium, sit et eum voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos debitis iste accusamus aut animi omnis sint velit, tenetur dolor placeat tempora quibusdam voluptatem, dolorem officiis? Aperiam placeat reiciendis quasi nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam impedit iure tenetur exercitationem autem mollitia perferendis, eos esse suscipit, nihil consectetur temporibus. Dolores in labore sapiente! Harum, dolorum unde.</p>
+        </div>  
+        
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');            
+            let water = document.getElementById('water');            
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left= value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left= value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * -0.5 + 'px';
+            })     
+        </script>
+    </body>
+</html>
